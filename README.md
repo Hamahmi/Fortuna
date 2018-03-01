@@ -23,3 +23,4 @@ Full Name                                               �
 [ibraam emad](https://github.com/ibraamEmad)                  |37-6983
 [yara dorgham](https://github.com/YaraDorgham)                |37-2464
 [khaled mohamed ahmed](https://github.com/khaledmhassan)      |37-2956
+[Daniel Malak](https://github.com/DanielMalak)                  |37-2220
