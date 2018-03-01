@@ -10,3 +10,4 @@ Full Name                                               �
 [Ahmed Samy Ismaeil Aly](https://github.com/Ahmedsamy1)    |37-6145
 [Mohamad Essam Amer](https://github.com/settings/profile)  | 34-314
 [Omar Ahraf Saleh](https://github.com/OmarAshrafSaleh)     |37-15763
+[Khaled Ahmed Khaled](https://github.com/KhaledAhmed19)     |37-8970
