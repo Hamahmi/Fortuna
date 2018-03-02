@@ -10,6 +10,7 @@ import { ThemeModule } from './@theme/theme.module';
 import { AppRoutingModule } from './app-routing.module';
 import { StorageServiceModule} from 'angular-webstorage-service';
 import { AppComponent } from './app.component';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,6 +18,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    HttpModule,
     NgbModule.forRoot(),
     ThemeModule.forRoot(),
     AppRoutingModule,

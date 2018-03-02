@@ -20,7 +20,9 @@ export class LoginService {
        var msg = res["msg"];
        if(msg == 'true'){
          window.sessionStorage.username = input.username;
+         window.sessionStorage.cart=[];
          this.router.navigate(['../dashboard/items']);
+         window.location.reload();
        }
        else{
          alert("Wrong username or password");

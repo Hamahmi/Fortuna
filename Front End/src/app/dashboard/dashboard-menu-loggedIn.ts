@@ -1,6 +1,6 @@
 import { NbMenuItem } from '@nebular/theme';
 
-export const MENU_ITEMS: NbMenuItem[] = [
+export const MENU_ITEMS_loggedin: NbMenuItem[] = [
   { title: 'Dashboard', icon: 'nb-home', link: '/dashboard', home: true },
   {
     title: 'Items',
@@ -21,19 +21,14 @@ export const MENU_ITEMS: NbMenuItem[] = [
       icon: 'fa fa-camera',
       link: '/dashboard/store/cameras'
     },
-   
+    {
+      title: 'MyItems',
+      icon: 'fa fa-shopping-basket',
+      link: '/dashboard/store/myitems'
+    }
   ]
 },
-  {
-    title: 'Login',
-    icon: 'fa fa-user',
-    link: '/dashboard/login'
-  },
-  {
-  	title: 'Sign Up',
-    icon: 'fa fa-user-plus',
-    link: '/dashboard/signup'
-  },
+  
   {
     title: 'About',
     icon: 'fa fa-question-circle',

@@ -72,3 +72,4 @@ mongoose
 
 require('../models/Product');
 require('../models/User');
+require('../models/usersProducts');
