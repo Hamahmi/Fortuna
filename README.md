@@ -3,18 +3,19 @@
 <h1>Project title: Sprint1</h1>
 <br>
 <h1>Getting started</h1>
-After downloading the back end portion of the project you should run both commands in the cmd
+After downloading the back end portion of the project you should run both commands in the cmd:
 ...
   npm install
   npm start
 ...
+
   <br>
-  After which you can proceed to downloading the front end and running these commands
+  After which you can proceed to downloading the front end and running these commands:
 ...
   npm install
   ng serve
 ...
-  <br>
+
   Now if you visit http://localhost:4200 on your browser you should have a functioning replica of our project :).
 
 
