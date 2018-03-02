@@ -1,5 +1,17 @@
-# T11S1C1
-Tut 11, C 1 !
+# nodejs-seed-project-es5
 
+A starter Node.js backend RESTful API using ES5.
 
-(link)**https://github.com/omardoma/nodejs-seed-project-es5.git**
+## Technology:
+
+* Node.js v8+
+* Express.js v4
+* MongoDB
+
+## How to run?
+
+1. Clone the repo.
+2. npm install
+3. npm start
+
+&#9400; Omar Doma 2018
