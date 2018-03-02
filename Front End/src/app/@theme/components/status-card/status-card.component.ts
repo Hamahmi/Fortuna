@@ -10,6 +10,7 @@ import { Component, Input } from '@angular/core';
           <ng-content></ng-content>
         </div>
       </div>
+
       <div class="details">
         <div class="title">{{ title }}</div>
         <div class="status">{{ on ? 'ON' : 'OFF' }}</div>

@@ -8,7 +8,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ThemeModule } from './@theme/theme.module';
 
 import { AppRoutingModule } from './app-routing.module';
-
+import { StorageServiceModule} from 'angular-webstorage-service';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -19,9 +19,11 @@ import { AppComponent } from './app.component';
     HttpClientModule,
     NgbModule.forRoot(),
     ThemeModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    StorageServiceModule
   ],
   bootstrap: [AppComponent],
   providers: [{ provide: APP_BASE_HREF, useValue: '/' }]
 })
-export class AppModule {}
+export class AppModule {
+}

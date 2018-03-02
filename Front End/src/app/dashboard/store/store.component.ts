@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { StoreService } from './store.service';
 
 @Component({
@@ -8,110 +9,43 @@ import { StoreService } from './store.service';
 })
 export class StoreComponent implements OnInit {
 
-  products;
-
-  constructor(private storeService: StoreService) { }
-
-
   settings = {
-
- 
-
-
-
-
-delete :{
-   confirmDelete: true
- } , 
- 
-
-edit:{
-     confirmSave:true
-    },
-
-    add:{
-     confirmCreate:true
-      },
-
     columns: {
-      id:{
-       title:'id'
-      },
-      username: {
-        title: 'User Name'
-      },
       name: {
-        title: 'name'
+        title: 'Product Name'
       },
-    
       price: {
         title: 'Price'
       },
-      componentNo: {
-        title: 'Component number'
-      },
       createdAt: {
-        title: 'Created At'
+        title: 'Created at'
       },
       updatedAt: {
-        title: 'Updated At'
+        title: 'Updated at'
+      },
+      username: {
+        title: 'Seller Name'
+      },
+      componentNo: {
+        title: 'component'
       }
+    },
+    actions:{
+      edit:false,
+      delete:false
     }
   };
 
+  products;
+
+  constructor(private storeService: StoreService) { 
+  }
+  
   ngOnInit() {
-    this.storeService.getProducts().subscribe(
-        (res: any) => {
-          this.products=res.data;
+    this.storeService.products().subscribe(
+        (res:any)=>{ 
+          this.products = res.data;
         }
     )
-  }
-
-
-
-
-  addProduct(event) {
-      var data = {"username" : event.newData.username,
-                  "price" : event.newData.price,
-                  "name" : event.newData.name,
-                  
-                  "componentNo" : event.newData.componentNo
-                  };
-   this.storeService.createProduct(data).subscribe(
-          res => {
-            console.log(res);
-            event.confirm.resolve(event.newData);
-
-    })
-  }
-  updateProduct(event) {
-    var data = {"username" : event.newData.username,
-                "price" : event.newData.price,
-                "name" : event.newData.name,
-                "id" :event.newData._id,
-                "componentNo" : event.newData.componentNo
-                };
-                
- this.storeService.updateProduct(data,event.data._id).subscribe(
-        res => {
-          console.log(res);
-          event.confirm.resolve(event.newData);
-
-  })
 }
-deleteRecord(event) {
-  
-  var id = event.data._id;
-          
-            
-                        
-this.storeService.deleteProduct(id).subscribe(
-      res => {
-        console.log(res);
-        event.confirm.resolve(event.newData);
-
-})
-}
-
-
 }

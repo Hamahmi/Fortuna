@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
-
+import { ItemsComponent } from './items.component';
 import { ThemeModule } from '../../@theme/theme.module';
 import { ItemsRoutingModule } from './items-routing.module';
+import { ItemsService } from './items.service';
 
-import { ItemsComponent } from './items.component';
+
 
 @NgModule({
   imports: [ThemeModule, ItemsRoutingModule],
   declarations: [ItemsComponent],
-  providers: []
+  providers: [ItemsService]
 })
 export class ItemsModule {}
