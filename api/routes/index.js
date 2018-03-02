@@ -16,9 +16,9 @@ router.get(
   usersProductsCtrl.getProductsByComponent
 );
 router.post('/usersProducts/createProduct', usersProductsCtrl.createProduct);
+router.patch('/usersProducts/updateProduct/:usersProductsId',usersProductsCtrl.updateProduct);
+router.delete('/usersProducts/deleteProduct/:usersProductsId', usersProductsCtrl.deleteProduct);
 
-router.patch('/usersProducts/updateProduct/:productId', usersProductsCtrl.updateProduct);
-router.delete('/usersProducts/deleteProduct/:productId', usersProductsCtrl.deleteProduct);
 //-------------------------------Product Routes-----------------------------------
 router.get('/product/getProducts', productCtrl.getProducts);
 

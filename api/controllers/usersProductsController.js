@@ -152,7 +152,7 @@ module.exports.createProduct = function(req, res, next) {
 };
 
 module.exports.updateProduct = function(req, res, next) {
-  if (!Validations.isObjectId(req.params.productId)) {
+  if (!Validations.isObjectId(req.params.usersProductsId)) {
     return res.status(422).json({
       err: null,
       msg: 'productId parameter must be a valid ObjectId.',
@@ -176,7 +176,7 @@ module.exports.updateProduct = function(req, res, next) {
   req.body.updatedAt = moment().toDate();
 
   usersProducts.findByIdAndUpdate(
-    req.params.productId,
+    req.params.usersProductsId,
     {
       $set: req.body
     },
@@ -199,14 +199,14 @@ module.exports.updateProduct = function(req, res, next) {
 };
 
 module.exports.deleteProduct = function(req, res, next) {
-  if (!Validations.isObjectId(req.params.productId)) {
+  if (!Validations.isObjectId(req.params.usersProductsId)) {
     return res.status(422).json({
       err: null,
       msg: 'productId parameter must be a valid ObjectId.',
       data: null
     });
   }
-  usersProducts.findByIdAndRemove(req.params.productId).exec(function(
+  usersProducts.findByIdAndRemove(req.params.usersProductsId).exec(function(
     err,
     deletedProduct
   ) {
