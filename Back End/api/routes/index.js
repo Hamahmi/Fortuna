@@ -22,3 +22,19 @@ router.get('/user/getUsers', asyncMiddleware(userCtrl.getUsers));
 router.get('/user/getUser/:userId', asyncMiddleware(userCtrl.getUser));
 router.post('/user/createUser', asyncMiddleware(userCtrl.createUser));
 router.post('/user/authenticate', asyncMiddleware(userCtrl.authenticate));
+
+//-------------------------------UserProducts Routes-----------------------------------
+router.get('/usersProducts/getProducts', usersProductsCtrl.getProducts);
+router.get('/usersProducts/getProduct/:usersProductsId', usersProductsCtrl.getProduct);
+
+router.get(
+  '/usersProducts/getProductsByUsername/:username',
+  usersProductsCtrl.getProductsByUsername
+);
+router.get(
+  '/usersProducts/getProductsByComponent/:componentNo',
+  usersProductsCtrl.getProductsByComponent
+);
+router.post('/usersProducts/createProduct', usersProductsCtrl.createProduct);
+router.patch('/usersProducts/updateProduct/:usersProductsId',usersProductsCtrl.updateProduct);
+router.delete('/usersProducts/deleteProduct/:usersProductsId', usersProductsCtrl.deleteProduct);
