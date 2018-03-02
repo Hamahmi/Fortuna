@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 
 import { NbMenuService, NbSidebarService } from '@nebular/theme';
 import { NbMenuBag } from '@nebular/theme/components/menu/menu.service';
+import { DashboardComponent } from '../../../dashboard/dashboard.component';
 
 @Component({
   selector: 'ngx-header',
@@ -38,5 +39,12 @@ export class HeaderComponent implements OnInit {
         
       }
     });
+  }
+  clicked(){
+    window.sessionStorage.username="";
+    console.log(window.sessionStorage.username);
+    this.menuService.navigateHome();
+    window.location.reload();
+    
   }
 }

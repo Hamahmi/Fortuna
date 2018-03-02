@@ -21,6 +21,7 @@ export class LoginService {
        if(msg == 'true'){
          window.sessionStorage.username = input.username;
          this.router.navigate(['../dashboard/items']);
+         window.location.reload();
        }
        else{
          alert("Wrong username or password");

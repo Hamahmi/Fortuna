@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { DashboardComponent } from './dashboard.component';
+import { MainStoreComponent } from './store/main-store/main-store.component';
+import { MyItemsComponent } from './store/my-items/my-items.component';
+import { CamerasComponent } from './store/cameras/cameras.component';
 
 
 const routes: Routes = [
@@ -18,8 +21,22 @@ const routes: Routes = [
         loadChildren: './login/login.module#LoginModule'
       },
       {
-        path: 'store',
-        loadChildren: './store/store.module#StoreModule'
+        path:'store',
+        children:[{
+          path:'main',
+          component:MainStoreComponent
+          
+        },
+        {
+          path:'myitems',
+          component:MyItemsComponent
+          
+        },
+        {
+          path:'cameras',
+          component:CamerasComponent
+          
+        }]        
       },
       {
         path: 'about',

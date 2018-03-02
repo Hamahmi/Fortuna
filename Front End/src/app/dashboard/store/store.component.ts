@@ -8,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class StoreComponent implements OnInit {
 
   constructor() { }
-
+name:string;
   ngOnInit() {
+   this.name= window.sessionStorage.username;
   }
 
 }
