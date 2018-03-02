@@ -1,7 +1,7 @@
 <h1 align="center">Fortuna</h1>
-![](https://i.imgur.com/qmFjX3z.png?raw=true)
+<br>
 <h1>Project title: Sprint1</h1>
-
+<br>
 <h1>Getting started</h1>
 <p>After downloading the back end portion of the project you should run both commands in the cmd
 ...
