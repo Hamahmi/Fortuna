@@ -1,4 +1,4 @@
-<h1 align="center">Fortuna</h1>
+[]<h1 align="center">Fortuna</h1>
 <br>
 <h1 align="center">Project title: Sprint1</h1>
 <br>
@@ -43,7 +43,7 @@ Full Name                                               �
 [Daniel Malak](https://github.com/DanielMalak)              |37-2220
 [Moustafa Atef Ibrahim](https://github.com/Moustafaatef74)  |37-16953
 [Ahmad Mofty Amr](https://github.com/themofty)              |37-10784
-
+[Sarah khaled ahmed safwat](https://github.com/SarahKhaled) |37-6662
 
 <h1 align="center"> About: </h1>
 <p>This repo was made for the purpose of a Software Engineering Sprint given by our university,
