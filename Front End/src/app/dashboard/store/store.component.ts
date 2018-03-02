@@ -70,7 +70,7 @@ edit:{
 
 
 
-  addRecord(event) {
+  addProduct(event) {
       var data = {"username" : event.newData.username,
                   "price" : event.newData.price,
                   "name" : event.newData.name,
@@ -84,7 +84,7 @@ edit:{
 
     })
   }
-  updateRecord(event) {
+  updateProduct(event) {
     var data = {"username" : event.newData.username,
                 "price" : event.newData.price,
                 "name" : event.newData.name,
