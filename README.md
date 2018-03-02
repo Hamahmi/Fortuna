@@ -1,8 +1,8 @@
 <h1 align="center">Fortuna</h1>
 <br>
-<h1>Project title: Sprint1</h1>
+<h1 align="center">Project title: Sprint1</h1>
 <br>
-<h1>Getting started</h1>
+<h1 align="center">Getting started</h1>
 After downloading the back end portion of the project you should run both commands in the cmd:
 
 ```
@@ -45,6 +45,6 @@ Full Name                                               �
 [Ahmad Mofty Amr](https://github.com/themofty)              |37-10784
 
 
-<h1> About: </h1>
+<h1 align="center"> About: </h1>
 <p>This repo was made for the purpose of a Software Engineering Sprint given by our university,
 <br>it is supposed to be our starting entry into the world of software engineering. :)</p>
