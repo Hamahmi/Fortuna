@@ -1,0 +1,7 @@
+<ng2-smart-table 
+[settings]="settings" 
+[source]="products" 
+(createConfirm)="createNewRecord($event)" 
+(deleteConfirm)="deleteExistingRecord($event)" 
+(editConfirm)="updateExistingRecord($event)"> 
+</ng2-smart-table>
