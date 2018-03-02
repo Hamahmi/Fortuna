@@ -3,6 +3,7 @@ const express = require('express'),
   asyncMiddleware = require('express-async-handler'),
   productCtrl = require('../controllers/ProductController');
   userCtrl = require('../controllers/UserController');
+  usersProductsCtrl = require('../controllers/usersProductsCtrl')
 
 //-------------------------------Product Routes-----------------------------------
 router.get('/product/getProducts', asyncMiddleware(productCtrl.getProducts));
