@@ -26,34 +26,28 @@ export class StoreComponent implements OnInit {
 
     columns: {
       name: {
-        title: 'Name',
-        filter:false
+        title: 'Name'
       },
       price: {
-        title: 'price',
-        filter:false
+        title: 'price'
 
       },
       createdAt: {
-        title: 'Created At',
-        filter:false
+        title: 'Created At'
 
       },
       updatedAt: {
-        title: 'Updated At',
-        filter:false
+        title: 'Updated At'
 
       },
 
       username: {
-        title: 'username',
-        filter:false
+        title: 'username'
 
       },
 
       componentNo: {
-        title: 'componentNo',
-        filter:false
+        title: 'componentNo'
 
       }
     }
