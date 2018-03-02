@@ -1,14 +1,14 @@
-const mongoose = require('mongoose');
+var mongoose = require('mongoose');
 
-module.exports.isString = str => {
+module.exports.isString = function(str) {
   return typeof str === 'string';
 };
 
-module.exports.isNumber = num => {
+module.exports.isNumber = function(num) {
   return !isNaN(num);
 };
 
-module.exports.isBoolean = bool => {
+module.exports.isBoolean = function(bool) {
   return (
     bool === true ||
     bool === false ||
@@ -16,18 +16,18 @@ module.exports.isBoolean = bool => {
   );
 };
 
-module.exports.isObject = obj => {
+module.exports.isObject = function(obj) {
   return typeof obj === 'object';
 };
 
-module.exports.isArray = arr => {
+module.exports.isArray = function(arr) {
   return Array.isArray(arr);
 };
 
-module.exports.isObjectId = id => {
+module.exports.isObjectId = function(id) {
   return mongoose.Types.ObjectId.isValid(id);
 };
 
-module.exports.matchesRegex = (str, regex) => {
+module.exports.matchesRegex = function(str, regex) {
   return regex.test(str);
 };

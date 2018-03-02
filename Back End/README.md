@@ -1,6 +1,6 @@
-# nodejs-seed-project
+# nodejs-seed-project-es5
 
-A starter Node.js backend RESTful API using ES6 & async-await.
+A starter Node.js backend RESTful API using ES5.
 
 ## Technology:
 

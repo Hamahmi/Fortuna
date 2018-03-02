@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { DashboardComponent } from './dashboard.component';
 
-
 const routes: Routes = [
   {
     path: '',
@@ -14,20 +13,8 @@ const routes: Routes = [
         loadChildren: './items/items.module#ItemsModule'
       },
       {
-        path: 'login',
-        loadChildren: './login/login.module#LoginModule'
-      },
-      {
         path: 'store',
         loadChildren: './store/store.module#StoreModule'
-      },
-      {
-        path: 'about',
-        loadChildren: './about/about.module#AboutModule'
-      },
-      {
-        path: 'signup',
-        loadChildren: './signup/signup.module#SignupModule'
       },
       {
         path: '',
@@ -44,4 +31,3 @@ const routes: Routes = [
   providers: []
 })
 export class DashboardRoutingModule {}
-

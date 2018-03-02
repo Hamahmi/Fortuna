@@ -17,6 +17,7 @@ var usersProductsSchema = mongoose.Schema({
     default: Date.now
   },
   updatedAt: Date,
+
   username: {
     type: String,
     required: true,

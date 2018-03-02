@@ -1,9 +1,9 @@
-const mongoose = require('mongoose'),
+var mongoose = require('mongoose'),
   moment = require('moment'),
   Validations = require('../utils/Validations'),
   Product = mongoose.model('Product');
 
-module.exports.getProduct = async (req, res) => {
+module.exports.getProduct = function(req, res, next) {
   if (!Validations.isObjectId(req.params.productId)) {
     return res.status(422).json({
       err: null,
@@ -11,29 +11,37 @@ module.exports.getProduct = async (req, res) => {
       data: null
     });
   }
-  const product = await Product.findById(req.params.productId).exec();
-  if (!product) {
-    return res
-      .status(404)
-      .json({ err: null, msg: 'Product not found.', data: null });
-  }
-  res.status(200).json({
-    err: null,
-    msg: 'Product retrieved successfully.',
-    data: product
+  Product.findById(req.params.productId).exec(function(err, product) {
+    if (err) {
+      return next(err);
+    }
+    if (!product) {
+      return res
+        .status(404)
+        .json({ err: null, msg: 'Product not found.', data: null });
+    }
+    res.status(200).json({
+      err: null,
+      msg: 'Product retrieved successfully.',
+      data: product
+    });
   });
 };
 
-module.exports.getProducts = async (req, res) => {
-  const products = await Product.find({}).exec();
-  res.status(200).json({
-    err: null,
-    msg: 'Products retrieved successfully.',
-    data: products
+module.exports.getProducts = function(req, res, next) {
+  Product.find({}).exec(function(err, products) {
+    if (err) {
+      return next(err);
+    }
+    res.status(200).json({
+      err: null,
+      msg: 'Products retrieved successfully.',
+      data: products
+    });
   });
 };
 
-module.exports.getProductsBelowPrice = async (req, res) => {
+module.exports.getProductsBelowPrice = function(req, res, next) {
   if (!Validations.isNumber(req.params.price)) {
     return res.status(422).json({
       err: null,
@@ -41,21 +49,27 @@ module.exports.getProductsBelowPrice = async (req, res) => {
       data: null
     });
   }
-  const products = await Product.find({
+  Product.find({
     price: {
       $lt: req.params.price
     }
-  }).exec();
-  res.status(200).json({
-    err: null,
-    msg:
-      'Products priced below ' + req.params.price + ' retrieved successfully.',
-    data: products
+  }).exec(function(err, products) {
+    if (err) {
+      return next(err);
+    }
+    res.status(200).json({
+      err: null,
+      msg:
+        'Products priced below ' +
+        req.params.price +
+        ' retrieved successfully.',
+      data: products
+    });
   });
 };
 
-module.exports.createProduct = async (req, res) => {
-  const valid =
+module.exports.createProduct = function(req, res, next) {
+  var valid =
     req.body.name &&
     Validations.isString(req.body.name) &&
     req.body.price &&
@@ -71,15 +85,19 @@ module.exports.createProduct = async (req, res) => {
   delete req.body.createdAt;
   delete req.body.updatedAt;
 
-  const product = await Product.create(req.body);
-  res.status(201).json({
-    err: null,
-    msg: 'Product was created successfully.',
-    data: product
+  Product.create(req.body, function(err, product) {
+    if (err) {
+      return next(err);
+    }
+    res.status(201).json({
+      err: null,
+      msg: 'Product was created successfully.',
+      data: product
+    });
   });
 };
 
-module.exports.updateProduct = async (req, res) => {
+module.exports.updateProduct = function(req, res, next) {
   if (!Validations.isObjectId(req.params.productId)) {
     return res.status(422).json({
       err: null,
@@ -87,7 +105,7 @@ module.exports.updateProduct = async (req, res) => {
       data: null
     });
   }
-  const valid =
+  var valid =
     req.body.name &&
     Validations.isString(req.body.name) &&
     req.body.price &&
@@ -103,26 +121,30 @@ module.exports.updateProduct = async (req, res) => {
   delete req.body.createdAt;
   req.body.updatedAt = moment().toDate();
 
-  const updatedProduct = await Product.findByIdAndUpdate(
+  Product.findByIdAndUpdate(
     req.params.productId,
     {
       $set: req.body
     },
     { new: true }
-  ).exec();
-  if (!updatedProduct) {
-    return res
-      .status(404)
-      .json({ err: null, msg: 'Product not found.', data: null });
-  }
-  res.status(200).json({
-    err: null,
-    msg: 'Product was updated successfully.',
-    data: updatedProduct
+  ).exec(function(err, updatedProduct) {
+    if (err) {
+      return next(err);
+    }
+    if (!updatedProduct) {
+      return res
+        .status(404)
+        .json({ err: null, msg: 'Product not found.', data: null });
+    }
+    res.status(200).json({
+      err: null,
+      msg: 'Product was updated successfully.',
+      data: updatedProduct
+    });
   });
 };
 
-module.exports.deleteProduct = async (req, res) => {
+module.exports.deleteProduct = function(req, res, next) {
   if (!Validations.isObjectId(req.params.productId)) {
     return res.status(422).json({
       err: null,
@@ -130,17 +152,22 @@ module.exports.deleteProduct = async (req, res) => {
       data: null
     });
   }
-  const deletedProduct = await Product.findByIdAndRemove(
-    req.params.productId
-  ).exec();
-  if (!deletedProduct) {
-    return res
-      .status(404)
-      .json({ err: null, msg: 'Product not found.', data: null });
-  }
-  res.status(200).json({
-    err: null,
-    msg: 'Product was deleted successfully.',
-    data: deletedProduct
+  Product.findByIdAndRemove(req.params.productId).exec(function(
+    err,
+    deletedProduct
+  ) {
+    if (err) {
+      return next(err);
+    }
+    if (!deletedProduct) {
+      return res
+        .status(404)
+        .json({ err: null, msg: 'Product not found.', data: null });
+    }
+    res.status(200).json({
+      err: null,
+      msg: 'Product was deleted successfully.',
+      data: deletedProduct
+    });
   });
 };

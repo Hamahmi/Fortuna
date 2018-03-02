@@ -119,6 +119,7 @@ module.exports.getProductsByUsername = function(req, res, next) {
   };
 
 module.exports.createProduct = function(req, res, next) {
+  
   var valid =
     req.body.name &&
     Validations.isString(req.body.name) &&
@@ -129,6 +130,7 @@ module.exports.createProduct = function(req, res, next) {
     req.body.componentNo &&
     Validations.isNumber(req.body.componentNo) ;
   if (!valid) {
+    
     return res.status(422).json({
       err: null,
       msg: ' name(String) and price(Number) and username(String) and componentNo(Numbers) are required fields.',
@@ -142,7 +144,9 @@ module.exports.createProduct = function(req, res, next) {
   usersProducts.create(req.body, function(err, product) {
     if (err) {
       return next(err);
+      
     }
+    
     res.status(201).json({
       err: null,
       msg: 'Product was created successfully.',
@@ -151,7 +155,8 @@ module.exports.createProduct = function(req, res, next) {
   });
 };
 
-module.exports.updateProduct = function(req, res, next) {
+module.exports.updateProduct= function(req, res, next) {
+  
   if (!Validations.isObjectId(req.params.usersProductsId)) {
     return res.status(422).json({
       err: null,

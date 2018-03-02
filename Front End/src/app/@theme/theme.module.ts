@@ -63,7 +63,7 @@ const PIPES = [CapitalizePipe, PluralPipe, RoundPipe, TimingPipe];
 const NB_THEME_PROVIDERS = [
   ...NbThemeModule.forRoot(
     {
-      name: 'cosmic'
+      name: 'default'
     },
     [DEFAULT_THEME, COSMIC_THEME]
   ).providers,
