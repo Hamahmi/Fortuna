@@ -15,9 +15,10 @@ router.get(
   '/usersProducts/getProductsByComponent/:componentNo',
   usersProductsCtrl.getProductsByComponent
 );
+router.post('/usersProducts/createProduct', usersProductsCtrl.createProduct);
 
-
-
+router.patch('/usersProducts/updateProduct/:productId', usersProductsCtrl.updateProduct);
+router.delete('/usersProducts/deleteProduct/:productId', usersProductsCtrl.deleteProduct);
 //-------------------------------Product Routes-----------------------------------
 router.get('/product/getProducts', productCtrl.getProducts);
 
@@ -31,7 +32,7 @@ router.get(
 
 
 router.post('/product/createProduct', productCtrl.createProduct);
-router.post('/usersProducts/createProduct', usersProductsCtrl.createProduct);
+
 router.patch('/product/updateProduct/:productId', productCtrl.updateProduct);
 router.delete('/product/deleteProduct/:productId', productCtrl.deleteProduct);
 
