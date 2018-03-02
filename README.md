@@ -1,4 +1,4 @@
-[<h1 align="center">Fortuna</h1>
+<h1 align="center">Fortuna</h1>
 <br>
 <h1 align="center">Project title: Sprint1</h1>
 <br>
