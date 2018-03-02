@@ -19,7 +19,7 @@ export class HeaderComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.userMenu = [{ title: 'Login' }];
+    this.userMenu = [{ title: 'Logout' }];
     this.onMenuItemClick();
   }
 
@@ -34,8 +34,8 @@ export class HeaderComponent implements OnInit {
 
   onMenuItemClick() {
     this.menuService.onItemClick().subscribe((bag: NbMenuBag) => {
-      if (bag.item.title === 'login') {
-        
+      if (bag.item.title === 'Logout') {
+        //Think about what to do ;)
       }
     });
   }
