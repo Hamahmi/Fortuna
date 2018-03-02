@@ -1,22 +1,19 @@
 <h1 align="center">Fortuna</h1>
-![alt text](https://imgur.com/qmFjX3z)
-
+![](https://i.imgur.com/qmFjX3z.png?raw=true)
 <h1>Project title: Sprint1</h1>
 
 <h1>Getting started</h1>
 <p>After downloading the back end portion of the project you should run both commands in the cmd
-  <br>
+...
   npm install
-  <br>
   npm start
-  <br>
+...
   <br>
   After which you can proceed to downloading the front end and running these commands
-  <br>
+...
   npm install
-  <br>
   ng serve
-  <br>
+...
   <br>
   Now if you visit http://localhost:4200 on your browser you should have a functioning replica of our project :).
   </p>
