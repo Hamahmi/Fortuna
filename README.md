@@ -9,7 +9,6 @@ After downloading the back end portion of the project you should run both comman
   npm start
 ...
 
-  <br>
   After which you can proceed to downloading the front end and running these commands:
 ...
   npm install
