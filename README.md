@@ -1,4 +1,4 @@
-<h1 align="center">Fortuna</h1>
+[<h1 align="center">Fortuna</h1>
 <br>
 <h1 align="center">Project title: Sprint1</h1>
 <br>
@@ -22,7 +22,7 @@ After downloading the back end portion of the project you should run both comman
 <h1 align="center">  <em>Authors:- </em> </h1>
 
 Full Name                                                  |  ID					   
-:---------------------------------------------------------: |:---------------:
+: Sarah Khaled ahmed safwat-------------------------------------------------------: |:----37-6662-----------:
 [Abdelrahman Gharib El Hamahmi](https://github.com/Hamahmi) |37-15881       
 [Ahmed Samy Ismaeil Aly](https://github.com/Ahmedsamy1)     |37-6145
 [Mohamad Essam Amer](https://github.com/settings/profile)   |34-314
