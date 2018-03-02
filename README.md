@@ -4,6 +4,7 @@
 <br>
 <h1>Getting started</h1>
 After downloading the back end portion of the project you should run both commands in the cmd:
+
 ```
   npm install
   npm start
