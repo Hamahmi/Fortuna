@@ -1,4 +1,8 @@
-![alt text](https://i.imgur.com/5I6MkiW.png)
+<p align="center">
+<img src="https://i.imgur.com/enaDdk4.png?1" />
+<br />
+<br />
+</p>
 <h1 align="center">Fortuna</h1>
 <br>
 <h1 align="center">Project title: Sprint1</h1>
