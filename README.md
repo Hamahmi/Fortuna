@@ -1,7 +1,5 @@
 <p align="center">
 <img src="https://i.imgur.com/enaDdk4.png?1" />
-<br />
-<br />
 </p>
 <h1 align="center">Fortuna</h1>
 <br>
